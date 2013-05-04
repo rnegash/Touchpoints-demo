@@ -1,7 +1,8 @@
 int nur;
 int counter=1;
 ArrayList object;
-public int sumOfPoints; //Räknar ihop summan av id´na som har assignats till spotsen
+public int sumOfIds; //Räknar ihop summan av id´na som har assignats till spotsen
+public int sum; //Räknar ihop summan av id´na som har assignats till spotsen
 void setup() {
   size(800, 600);
   object = new ArrayList();
@@ -9,11 +10,11 @@ void setup() {
   for (float x=350;x<400;x+=50) {
     for (float y=50;y<450;y+=50) {
       object.add(new spots(x+random(-50, 50), y, 50, counter++));
-      sumOfPoints+=counter;
+      sumOfIds+=counter;
     }
   }
-  sumOfPoints-=counter;
-  println(sumOfPoints);
+  sumOfIds-=counter;
+  println(sumOfIds);
 }
 
 
@@ -24,6 +25,10 @@ void draw() {
     spots objectal = (spots) object.get(i);
     objectal.display();
     objectal.checkTouch();
+    if(sum>sumOfIds){
+      background(#FF1CFC);
+
+    }
   }
   /*    for (spots objectal:(spots)object) {
    //spots objectal = (spots) object.get(i);

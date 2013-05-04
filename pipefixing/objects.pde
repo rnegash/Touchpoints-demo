@@ -7,10 +7,10 @@ class spots {
     _x=x;
     _y=y;
     _s=s;
-    this._pid=id;
+    // this._pid=id;
     this.id=id;
   }
-  color  f=100;
+  color  f=100;//färg
   void display() {
     stroke(255);
     fill(f);
@@ -23,36 +23,36 @@ class spots {
    
    när sum sedan blir samma som sumOfPoints, kan man säga att man har klarat tasken
    */
-  int sum=0; //Räkna ihop summan av id'n som har blivit nertryckta
+  //public int sum; //Räkna ihop summan av id'n som har blivit nertryckta
   int pid=0;//senaste nertryckta id't
   boolean added=false;//kolla om id't har blivit tillagt
 
   boolean checkTouch() {
     if (mousePressed) {
       if (mousePressed&&dist(_x, _y, mouseX, mouseY)<_s/2) {
-        if (_pid==id&&added==false) {
+        if (added==false) {
           sum+=id;
           added=true;
           f=255;
         }
-        else if (!mousePressed) {
-          added=false;
-          f=100;
-          sum+=0;
+        else {
+          //added=false;
+          //f=100;
+          //sum+=0;
         }
         print("id = "+id);
-        print(" pid = "+_pid);
+        //print(" pid = "+_pid);
         println(" sum = "+sum);
       }
     }
     else {
       f=100;
       added=false;
-      pid=0;
+      //pid=0;
       sum=0;
     }
-    
-    
+
+
     if (added) {
       return true;
     }
