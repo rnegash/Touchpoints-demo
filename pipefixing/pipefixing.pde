@@ -9,7 +9,7 @@ void setup() {
   //lägg till alla spots
   for (float x=350;x<400;x+=50) {
     for (float y=50;y<450;y+=50) {
-      object.add(new spots(x+random(-50, 50), y, 50, counter++));
+      object.add(new spots(x+random(-75, 75), y, 50, counter++));
       sumOfIds+=counter;
     }
   }
