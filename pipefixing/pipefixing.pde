@@ -1,10 +1,11 @@
 int nur;
 int counter=1;
 ArrayList object;
-public int sumOfPoints;
+public int sumOfPoints; //Räknar ihop summan av id´na som har assignats till spotsen
 void setup() {
   size(800, 600);
   object = new ArrayList();
+  //lägg till alla spots
   for (float x=350;x<400;x+=50) {
     for (float y=50;y<450;y+=50) {
       object.add(new spots(x+random(-50, 50), y, 50, counter++));
@@ -18,6 +19,7 @@ void setup() {
 
 void draw() {
   background(10);
+  //Loopa igenom spotsen och kör funktionerna för att visa och kolla touch
   for (int i =0;i<object.size(); i++) {
     spots objectal = (spots) object.get(i);
     objectal.display();
