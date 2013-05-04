@@ -25,6 +25,11 @@ void draw() {
     objectal.display();
     objectal.checkTouch();
   }
+/*    for (spots objectal:(spots)object) {
+    //spots objectal = (spots) object.get(i);
+    objectal.display();
+    objectal.checkTouch();
+  }*/
 }
 /*
 void spot(float x, float y, float s, int nr) {

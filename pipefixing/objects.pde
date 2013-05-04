@@ -21,6 +21,8 @@ class spots {
   /*
   kolla om något id är nertryckt. Vill fortsätta lägga till id'n till sum sålänge mousPressed==true och
    id't inte redan har blivit tillagt under denna mousepressed
+   
+   när sum sedan blir samma som sumOfPoints, kan man säga att man har klarat tasken
    */
   void checkTouch() {
     if (mousePressed) {
