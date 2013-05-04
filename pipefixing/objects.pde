@@ -19,19 +19,21 @@ class spots {
   void checkTouch() {
     if (mousePressed) {
       if (mousePressed&&dist(_x, _y, mouseX, mouseY)<_s/2) {
-        pid=id;
-        if (pid==id&&added==false) {
+
+        if (pid!=id) added=false;
+
+        if (added==false) {
           sum+=id;
+          pid=id;
           added=true;
         }
         else {
-          
+          sum+=0;
         }
         print("pid = "+pid);
         print(" id = "+id);
         println(" sum = "+sum);
       }
-      
     }
     else {
       pid=-1;
