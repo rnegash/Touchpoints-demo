@@ -10,7 +10,7 @@ class spots {
     this._pid=id-1;
     this.id=id;
   }
-  int  f=100;
+  color  f=100;
   void display() {
     stroke(255);
     fill(f);
@@ -27,7 +27,7 @@ class spots {
   int pid=0;//senaste nertryckta id't
   boolean added=false;//kolla om id't har blivit tillagt
 
-  void checkTouch() {
+  boolean checkTouch() {
     if (mousePressed) {
       if (mousePressed&&dist(_x, _y, mouseX, mouseY)<_s/2) {
         _pid=id;
@@ -51,6 +51,12 @@ class spots {
       added=false;
       pid=0;
       sum=0;
+    }
+    if (added) {
+      return true;
+    }
+    else {
+      return false;
     }
   }
 }
