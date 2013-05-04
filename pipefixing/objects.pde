@@ -14,14 +14,27 @@ class spots {
     ellipse(_x, _y, _s, _s);
   }
   int sum=0;
+  int pid=-1;
+  boolean added=false;
   void checkTouch() {
     if (mousePressed) {
       if (mousePressed&&dist(_x, _y, mouseX, mouseY)<_s/2) {
-        sum+=id;
-        println(id+" "+sum);
+        pid=id;
+        if (pid==id&&added==false) {
+          sum+=id;
+          added=true;
+        }
+        else {
+          
+        }
+        print("pid = "+pid);
+        print(" id = "+id);
+        println(" sum = "+sum);
       }
+      
     }
     else {
+      pid=-1;
       sum=0;
     }
   }
