@@ -7,7 +7,7 @@ class spots {
     _x=x;
     _y=y;
     _s=s;
-    this._pid=id-1;
+    this._pid=id;
     this.id=id;
   }
   color  f=100;
@@ -30,7 +30,6 @@ class spots {
   boolean checkTouch() {
     if (mousePressed) {
       if (mousePressed&&dist(_x, _y, mouseX, mouseY)<_s/2) {
-        _pid=id;
         if (_pid==id&&added==false) {
           sum+=id;
           added=true;
@@ -52,6 +51,8 @@ class spots {
       pid=0;
       sum=0;
     }
+    
+    
     if (added) {
       return true;
     }
