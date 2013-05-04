@@ -14,7 +14,7 @@ class spots {
     ellipse(_x, _y, _s, _s);
   }
   int sum=0;
-  int pid=-1;
+  int pid=0;
   boolean added=false;
   void checkTouch() {
     if (mousePressed) {
@@ -36,7 +36,7 @@ class spots {
       }
     }
     else {
-      pid=-1;
+      pid=0;
       sum=0;
     }
   }

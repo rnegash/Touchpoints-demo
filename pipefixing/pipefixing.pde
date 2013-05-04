@@ -1,5 +1,5 @@
 int nur;
-int counter;
+int counter=1;
 ArrayList object;
 public int sumOfPoints;
 void setup() {
